@@ -1,0 +1,140 @@
+
+/* Invoice Area Css Start */
+
+
+
+.invoice__orderDetails span{
+    font-size: 14px;
+}
+.invoice__orderDetails p{
+    margin-bottom: 0px;
+}
+
+.invoice__shipping span{
+    font-size: 14px;
+}
+.invoice__shipping p{
+    margin-bottom: 0px;
+}
+.invoice__metaInfo span{
+    font-size: 14px;
+}
+.invoice__metaInfo p{
+    margin-bottom: 0px;
+}
+.invoice_table .table thead th {
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.invoice_table .table > tbody > tr > td,
+.invoice_table .table > tbody > tr > th {
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    font-size: 14px;
+}
+
+.invoice_table .table > tbody > tr > td p,
+.invoice_table .table > tbody > tr > th  p{
+    font-size: 14px;
+}
+.invoice_table .table > tbody > tr > td p {
+    display: flex;
+    margin-bottom: 0px;
+}
+.invoice_table .table > tbody > tr > td p strong{
+    margin-right: 5px;
+}
+.add-newProduct-btn.print{
+    background: rgb(0, 177, 0);
+}
+.add-newProduct-btn.print:hover{
+    background: rgb(0, 141, 0);
+}
+/* Invoice Area Css End */
+
+/*Star Rating Start*/
+.starrr {
+    display: inline-block;
+}
+.starrr a {
+    font-size: 16px;
+    padding: 0 1px;
+    cursor: pointer;
+    color: #2d3274;
+    text-decoration: none;
+}
+
+/*Star Rating End*/
+
+.ratings {
+    position: relative;
+    vertical-align: middle;
+    display: inline-block;
+    color: #b1b1b1;
+    overflow: hidden;
+}
+.full-stars {
+    position: absolute;
+    left: 0;
+    top: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #2d3274;
+}
+.empty-stars:before, .full-stars:before {
+    content:"\2605\2605\2605\2605\2605";
+    font-size: 14px;
+}
+.empty-stars:before {
+    -webkit-text-stroke: 1px #2d3274;
+    color:transparent;
+}
+.full-stars:before {
+    -webkit-text-stroke: 1px #2d3274;
+}
+/* Webkit-text-stroke is not supported on firefox or IE */
+
+/* Firefox */
+@-moz-document url-prefix() {
+    .full-stars {
+        color: #2d3274;
+    }
+}
+.full-stars {
+    color: #2d3274;
+}
+/*Star Rating End*/
+.admin-fix-height-card {direction: ltr !important;}
+
+#verify-modal .modal-dialog {
+    max-width: 70%; }
+#attribute .modal-dialog {
+    max-width: 70%; }
+
+    a.f-btn {
+        border-radius: 50px !important;
+    }
+    .product-description .panel-heading.text-center h3 {
+        font-size: 20px;
+    }
+
+p,
+a,
+span,
+td,
+div.dataTables_wrapper div.dataTables_info,
+.input-field
+{
+    font-size: 14px;
+}
+
+.add-product-content .product-description .body-area .left-area .heading{
+    font-size: 16px!important;
+    font-weight: 600;
+}
+.close span{
+    font-size: 20px!important;
+}
+.header .right-eliment .list li .dropdown-menu .dropdownmenu-wrapper ul {
+    max-height: 400px;
+    overflow: auto;
+}

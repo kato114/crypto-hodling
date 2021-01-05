@@ -1,0 +1,32 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class {{modelName}} extends Model
+{
+    protected $fillable = ['title','details', 'photo','meta_tag','meta_description','tags'];
+
+    public $timestamps = false;
+
+    public function Many()
+    {
+    	return $this->hasMany('App\Models\ClassName');
+    }
+
+    public function To()
+    {
+    	return $this->belongsTo('App\Models\ClassName')->withDefault(function ($data) {
+			foreach($data->getFillable() as $dt){
+				$data[$dt] = __('Deleted');
+			}
+		});
+    }
+
+    public function One()
+    {
+        return $this->hasOne('App\Models\ClassName');
+    }
+
+}

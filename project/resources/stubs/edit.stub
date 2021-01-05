@@ -1,0 +1,162 @@
+@extends('layouts.load')
+
+@section('content')
+            <div class="content-area">
+
+              <div class="add-product-content">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="product-description">
+                      <div class="body-area">
+                        @include('includes.admin.form-error') 
+                      <form id="geniusformdata" action="{{route('admin-{{modelNameSingularLowerCase}}-update',$data->id)}}" method="POST" enctype="multipart/form-data">
+                        {{csrf_field()}}
+
+                        <div class="row">
+                          <div class="col-lg-4">
+                            <div class="left-area">
+                                <h4 class="heading">Title *</h4>
+                                <p class="sub-heading">(In Any Language)</p>
+                            </div>
+                          </div>
+                          <div class="col-lg-7">
+                            <input type="text" class="input-field" name="title" placeholder="Title" value="{{$data->title}}" required="">
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-lg-4">
+                            <div class="left-area">
+                                <h4 class="heading">Current Featured Image *</h4>
+                            </div>
+                          </div>
+                          <div class="col-lg-7">
+                            <div class="img-upload">
+                                <div id="image-preview" class="img-preview" style="background: url({{ $data->photo ? asset('assets/images/{{modelNameSingularLowerCase}}/'.$data->photo):asset('assets/images/noimage.png') }});">
+                                    <label for="image-upload" class="img-label" id="image-label"><i class="icofont-upload-alt"></i>Upload Image</label>
+                                    <input type="file" name="photo" class="img-upload" id="image-upload">
+                                  </div>
+                                  <p class="text">Prefered Size: (600x600) or Square Sized Image</p>
+                            </div>
+
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-lg-4">
+                            <div class="left-area">
+                              <h4 class="heading">
+                                   Description *
+                              </h4>
+                            </div>
+                          </div>
+                          <div class="col-lg-7">
+                              <textarea class="nic-edit" name="details" placeholder="Details">{{ $data->details }}</textarea> 
+                          </div>
+                        </div>
+
+
+                        <div class="row">
+                          <div class="col-lg-4">
+                            <div class="left-area">
+                            </div>
+                          </div>
+                          <div class="col-lg-7">
+                            <div class="checkbox-wrapper">
+                              <input type="checkbox" name="secheck" class="checkclick" id="allowProductSEO" {{ ($data->meta_tag != null || strip_tags($data->meta_description) != null) ? 'checked':'' }}>
+                              <label for="allowProductSEO">Allow Blog SEO</label>
+                            </div>
+
+                          </div>
+                        </div>
+
+
+                        <div class="{{ ($data->meta_tag == null && strip_tags($data->meta_description) == null) ? "showbox":"" }}">
+                          <div class="row">
+                            <div class="col-lg-4">
+                              <div class="left-area">
+                                  <h4 class="heading">Meta Tags *</h4>
+                              </div>
+                            </div>
+                            <div class="col-lg-7">
+                              <ul id="metatags" class="myTags">
+                                @foreach (explode(',',$data->meta_tag) as $element)
+                                  <li>{{  $element }}</li>
+                                @endforeach
+                              </ul>
+                            </div>
+                          </div>  
+
+                          <div class="row">
+                            <div class="col-lg-4">
+                              <div class="left-area">
+                                <h4 class="heading">
+                                    Meta Description *
+                                </h4>
+                              </div>
+                            </div>
+                            <div class="col-lg-7">
+                              <div class="text-editor">
+                                <textarea class="nic-edit" name="meta_description" placeholder="Details">{{ $data->meta_description }}</textarea> 
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-lg-4">
+                            <div class="left-area">
+                                <h4 class="heading">Tags *</h4>
+                            </div>
+                          </div>
+                          <div class="col-lg-7">
+                            <ul id="tags" class="myTags">
+                                @foreach (explode(',',$data->tags) as $element)
+                                  <li>{{  $element }}</li>
+                                @endforeach
+                            </ul>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-lg-4">
+                            <div class="left-area">
+                              
+                            </div>
+                          </div>
+                          <div class="col-lg-7">
+                            <button class="addProductSubmit-btn" type="submit">Save</button>
+                          </div>
+                        </div>
+                      </form>
+
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+@endsection
+
+@section('scripts')
+
+<script type="text/javascript">
+
+{{-- TAGIT --}}
+
+          $("#metatags").tagit({
+          fieldName: "meta_tag[]",
+          allowSpaces: true 
+          });
+
+          $("#tags").tagit({
+          fieldName: "tags[]",
+          allowSpaces: true 
+        });
+{{-- TAGIT ENDS--}}
+</script>
+
+@endsection

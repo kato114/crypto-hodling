@@ -1,0 +1,21 @@
+
+#preview-crop-image {
+	background: #ffffff;
+	width: 250px;
+	border: 10px solid #333;
+	height: 250px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+ button.upload-image {
+        height: 50px;
+    }
+    .croppie-container .cr-boundary {
+      margin: 0px;
+    }
+    .croppie-container .cr-slider-wrap {
+        margin: 15px 0px;
+    }
+.upload-image{
+    width: 160px;
+}

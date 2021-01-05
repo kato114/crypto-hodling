@@ -1,0 +1,234 @@
+@media (max-width: 1600px) { 
+  .row-cards-one .mycard::after {
+    right: -100px;
+  }
+ }
+
+@media (max-width: 1400px) { 
+  .row-cards-one .mycard .right .icon {
+    font-size: 50px;
+  }
+  .row-cards-one .mycard::after {
+    right: -145px;
+  }
+  .add-product-content .product-description .body-area {
+    padding: 30px 30px 30px 30px;
+  }
+  .add-product-content .product-description .body-area .table tr td:first-child {
+    width: 300px;
+}
+canvas.canvasjs-chart-canvas {
+  width: 400px!important;
+}
+
+div#preview-crop-image {
+    width: 250px !important;
+    height: 250px !important;
+}
+.img-upload.full-width-img #image-preview label, .img-upload.full-width-img #image-preview input {
+
+  margin-top: 70px;
+
+}
+.c-info-box-area .c-info-box {
+  width: 180px;
+  height: 180px;
+}
+
+
+
+ }
+
+@media (max-width: 1300px) {
+  .row-cards-one .mycard .right .icon {
+    font-size: 40px;
+  } 
+  .row-cards-one .mycard::after {
+    right: -180px;
+    transform: rotate(20deg);
+  }
+  .row-cards-one .mycard {
+    padding: 25px 20px 30px;
+  }
+
+
+ }
+@media  (max-width: 1199px) {
+
+
+
+  .row-cards-one .mycard::after {
+    right: -130px;
+    transform: rotate(20deg);
+  }
+  .row-cards-one .mycard .right .icon {
+    font-size: 50px;
+  }
+  .add-product-content .product-description .body-area .table tr td:first-child {
+    width: 200px;
+  }
+  #sidebar {
+    min-width: 240px;
+    max-width: 240px;
+  }
+  #sidebar.active {
+    margin-left: -240px;
+  }
+  .img-upload #image-preview {
+    width: 208px;
+    height: 200px;
+  }
+  .img-upload #image-preview input,
+  .img-upload #image-preview label
+  {
+    width: 150px;
+  }
+  #modal1 .modal-dialog {
+    max-width: 80%;
+  }
+
+ }
+ @media (min-width: 992px) and (max-width: 1199.98px) { 
+  #modal1 .modal-dialog {
+    max-width: 98%;
+  }
+}
+@media  (max-width: 991px) {
+  .row-cards-one .mycard::after {
+    right: -40px;
+    transform: rotate(20deg);
+  }
+  .row-cards-one .mycard .right .icon {
+    font-size: 70px;
+  }
+  .row-cards-one .mycard {
+    padding: 25px 30px 30px;
+  }
+
+  #modal1 .modal-dialog {
+    max-width: 98%;
+  }
+  .add-product-content .product-description .body-area .left-area {
+    text-align: l;
+  }
+  .add-product-content .product-description .body-area .left-area{
+    text-align: left;
+  }
+  .add-product-content .product-description .body-area .set-gallery {
+    margin-top: 15px;
+    display: inline-block;
+}
+
+}
+
+@media  (max-width: 767px) {
+  .header .right-eliment .list li.serch-form-area input {
+    width: 250px;
+}
+.img-upload .text{
+  margin-top: 90px;
+}
+.img-upload.full-width-img  .text {
+   margin-top: 0px; 
+}
+.img-upload.full-width-img {
+    margin-bottom: 90px;
+}
+.img-upload #image-preview input, .img-upload #image-preview label,
+.img-upload #image-preview input{
+  top: 100%;
+  margin-left: 0px;
+  left: 0px;
+  margin-top: 50px;
+}
+.header .right-eliment .list li.serch-form-area input {
+  width: 180px;
+}
+#sidebar {
+  margin-left: -240px;
+}
+#sidebar.active {
+  margin-left: 0px;
+}
+  .remove-mobile {
+    display: none;
+  }
+
+ }
+
+
+@media  (max-width: 575px) {
+  #geniustable td img {
+    max-height: auto;
+    max-width: 260px;
+    width: 260px;
+  }
+  .header .right-eliment .list li.serch-form-area
+  {
+    display: none;
+  }
+  .header .right-eliment .list li .dropdown-menu {
+    width: 100%;
+    left: 0;
+}
+  .add-product-content .product-description .body-area .table tr td:first-child .heading {
+      font-size: 16px;
+  }
+  .add-product-content .product-description .body-area .table tr td:first-child {
+    width: 170px;
+  }
+  .add-product-content .product-description .body-area {
+    padding: 30px 24px 30px 25px;
+  }
+.table-contents {
+  text-align: center;
+  margin-bottom: 10px;
+ }
+}
+
+@media  (max-width: 500px) {
+  .row-cards-one .mycard::after {
+    right: -110px;
+  }
+  .row-cards-one .mycard .right .icon {
+    font-size: 50px;
+  }
+ }
+
+@media  (max-width: 450px) {
+  .header .right-eliment .list li.bell-area.dropdown .dropdown-menu {
+    right: -70px;
+}
+ }
+
+@media  (max-width: 414px) {
+   .row-cards-one .mycard .right .icon {
+    font-size: 40px;
+  } 
+  .row-cards-one .mycard::after {
+    right: -170px;
+    transform: rotate(20deg);
+  }
+  .row-cards-one .mycard {
+    padding: 25px 20px 30px;
+  }
+  .row-cards-one .mycard .left .number {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+.row-cards-one .mycard .left .title {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+
+ }
+ @media  (max-width: 390px) {
+  #geniustable td img {
+    max-height: auto;
+    max-width: 200px;
+    width: 200px;
+  }
+
+ }
